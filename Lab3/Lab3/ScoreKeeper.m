@@ -10,6 +10,6 @@
 
 @implementation ScoreKeeper
 - (NSString *)showResult{
-    return [NSString stringWithFormat: @"score: %d right, %d wrong ---- %d%%", _right, _wrong, _right*100/(_right+_wrong)];
+    return [NSString stringWithFormat: @"score: %d right, %d wrong ---- %d %%", _right, _wrong, _right*100/(_right+_wrong)];
 }
 @end

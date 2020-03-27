@@ -7,6 +7,7 @@
 //
 
 #import "AdditionQuestion.h"
+#import "Question.h"
 
 @implementation AdditionQuestion
 
@@ -14,35 +15,14 @@
 {
     self = [super init];
     if (self) {
-        NSInteger n1 = arc4random_uniform(91)+10;
-        NSInteger n2 = arc4random_uniform(91)+10;
-        NSInteger o = arc4random_uniform(4);
-        switch (o) {
-            case 0:
-                _question = [NSString stringWithFormat: @"%ld + %ld ?", n1, n2];
-                _answer = n1 + n2;
-                break;
-            case 1:
-                _question = [NSString stringWithFormat: @"%ld - %ld ?", n1, n2];
-                _answer = n1 - n2;
-                break;
-            case 2:
-                _question = [NSString stringWithFormat: @"%ld * %ld ?", n1, n2];
-                _answer = n1 * n2;
-                break;
-            case 3:
-                _question = [NSString stringWithFormat: @"%ld / %ld ?", n1, n2];
-                _answer = n1 / n2;
-                break;
-            default:
-                break;
-        }
+        [self generateRandomQuestion];
     }
     return self;
 }
 
 - (void)generateRandomQuestion{
-    
+    self.question =  [NSString stringWithFormat: @"%ld + %ld ?", self.leftValue, self.rightValue];
+    self.answer = self.leftValue+self.rightValue;
 }
 
 @end

@@ -10,12 +10,18 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         ScoreKeeper *sk = [ScoreKeeper new];
+        QuestionManager *qm = [QuestionManager new];
+        QuestionFactory *qf = [QuestionFactory new];
+        NSLog(@"MATHS!!");
+        
         while (true){
-            AdditionQuestion *q = [AdditionQuestion new];
+            AdditionQuestion *q = qf.generateRandomQuestion;
             NSString *pc =[InputHandler getUserInput:10 : q.question];
             
             if([pc isEqualToString:@"quit"]){
@@ -31,7 +37,11 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Wrong!");
                 sk.wrong = sk.wrong + 1;
             }
+            
+            [qm.questions addObject:[NSNumber numberWithDouble:q.answerTime]];
+            
             NSLog(sk.showResult);
+            NSLog(qm.timeOutput);
         }
     }
     return 0;
