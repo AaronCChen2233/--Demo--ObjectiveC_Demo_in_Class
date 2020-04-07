@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
                 playerCount = 0;
             }
         }
-        /**for test now*/
+        /**for test*/
 //        playerCount = 1;
         
         NSMutableArray *players = [NSMutableArray new];
@@ -37,6 +37,7 @@ int main(int argc, const char * argv[]) {
             [p Start];
         }
         
+        /**Get the player who has minimum score*/
         Player *winner = players[0];
         for(int i = 1 ;i<players.count;i++){
             Player *c = players[i];
@@ -44,6 +45,8 @@ int main(int argc, const char * argv[]) {
                 winner = c;
             }
         }
+        
+        /**Show winner name*/
         NSLog(@"Winner is %@", winner.playerName);
         
     }

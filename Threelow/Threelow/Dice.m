@@ -46,10 +46,11 @@
             break;
     }
     
+    /**Add brackets if is held*/
     if(_held){
-        i = [NSString stringWithFormat:@"[%@]", i];
+        i = [NSString stringWithFormat:@" [%@] ", i];
     }else{
-        i = [NSString stringWithFormat:@" %@ ", i];
+        i = [NSString stringWithFormat:@"  %@  ", i];
     }
     
     return i;

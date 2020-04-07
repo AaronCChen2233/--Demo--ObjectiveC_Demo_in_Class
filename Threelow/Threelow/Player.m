@@ -32,15 +32,18 @@
 -(void)Start{
     NSInteger left = 4;
     
+    /**first roll*/
     for (int i = 0;i<5;i++){
         Dice *d = [Dice new];
         [d roll];
         [_dices addObject:d];
     }
+    
     [self CluTotalScore];
     BOOL isShow = false;
+    
+    /**if left is 0 is done*/
     while (left > 0) {
-        
         if(!isShow){
             [self showInfo:left];
         }else{
@@ -97,7 +100,6 @@
     NSLog(@"%@", @"'done' to end the game");
     NSLog(@"%@", @"'display' to show current stats ");
 }
-
 
 -(NSString *) GetDicesNSString{
     NSString *diceStr = @"";
