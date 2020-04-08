@@ -10,7 +10,7 @@
 		7BB6C56A243CE04700B91B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6C569243CE04700B91B3C /* main.m */; };
 		7BB6C572243CE12E00B91B3C /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6C571243CE12E00B91B3C /* Dice.m */; };
 		7BB6C575243CEFB200B91B3C /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6C574243CEFB200B91B3C /* Player.m */; };
-		7BB6C578243CF3AF00B91B3C /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6C577243CF3AF00B91B3C /* InputHandler.m */; };
+		7BD9AA5E243E3EBB005A9926 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9AA5C243E3EBB005A9926 /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +32,8 @@
 		7BB6C571243CE12E00B91B3C /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		7BB6C573243CEFB200B91B3C /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7BB6C574243CEFB200B91B3C /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		7BB6C576243CF3AF00B91B3C /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = ../../Lab3/Lab3/InputHandler.h; sourceTree = "<group>"; };
-		7BB6C577243CF3AF00B91B3C /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputHandler.m; path = ../../Lab3/Lab3/InputHandler.m; sourceTree = "<group>"; };
+		7BD9AA5C243E3EBB005A9926 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		7BD9AA5D243E3EBB005A9926 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 		7BB6C568243CE04700B91B3C /* Threelow */ = {
 			isa = PBXGroup;
 			children = (
-				7BB6C576243CF3AF00B91B3C /* InputHandler.h */,
-				7BB6C577243CF3AF00B91B3C /* InputHandler.m */,
+				7BD9AA5D243E3EBB005A9926 /* InputHandler.h */,
+				7BD9AA5C243E3EBB005A9926 /* InputHandler.m */,
 				7BB6C569243CE04700B91B3C /* main.m */,
 				7BB6C570243CE12E00B91B3C /* Dice.h */,
 				7BB6C571243CE12E00B91B3C /* Dice.m */,
@@ -137,7 +137,7 @@
 				7BB6C572243CE12E00B91B3C /* Dice.m in Sources */,
 				7BB6C575243CEFB200B91B3C /* Player.m in Sources */,
 				7BB6C56A243CE04700B91B3C /* main.m in Sources */,
-				7BB6C578243CF3AF00B91B3C /* InputHandler.m in Sources */,
+				7BD9AA5E243E3EBB005A9926 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
