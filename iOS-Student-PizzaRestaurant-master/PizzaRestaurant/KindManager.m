@@ -18,22 +18,23 @@
 }
 
 - (void)kitchenDidMakePizza:(Pizza *)pizza{
-    switch (arc4random_uniform(4)) {
-        case 0:
-            NSLog(@"%s","Here you are");
-            break;
-        case 1:
-            NSLog(@"%s","Thank!");
-            break;
-        case 2:
-            NSLog(@"%s","Have nice day");
-            break;
-        case 3:
-            NSLog(@"%s","Here you are See you next time");
-            break;
-        default:
-            NSLog(@"%s","Here you are");
-            break;
-    }
+    [_deliveryDelegate deliverPizza:pizza];
+    //    switch (arc4random_uniform(4)) {
+    //        case 0:
+    //            NSLog(@"%s","Here you are");
+    //            break;
+    //        case 1:
+    //            NSLog(@"%s","Thank!");
+    //            break;
+    //        case 2:
+    //            NSLog(@"%s","Have nice day");
+    //            break;
+    //        case 3:
+    //            NSLog(@"%s","Here you are See you next time");
+    //            break;
+    //        default:
+    //            NSLog(@"%s","Here you are");
+    //            break;
+    //    }
 }
 @end

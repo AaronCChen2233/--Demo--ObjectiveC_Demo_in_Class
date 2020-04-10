@@ -11,7 +11,7 @@
 #import "Kitchen.h"
 #import "Manager.h"
 #import "KindManager.h"
-
+#import "DeliveryService.h"
 int main(int argc, const char * argv[])
 {
     
@@ -20,7 +20,7 @@ int main(int argc, const char * argv[])
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
-        
+        DeliveryService *ds = [DeliveryService new];
         while (TRUE) {
             // Loop forever
             
@@ -39,15 +39,17 @@ int main(int argc, const char * argv[])
             // And then send some message to the kitchen...
             
             PizzaSize ps = [Pizza NsStringToPizzaSizeE:commandWords[0]];
-            
+
             [commandWords removeObjectAtIndex:0];
             
             /**Only a quarter of the chance you will meet a kind manager*/
             if(arc4random_uniform(4)==0){
                 KindManager *km = [KindManager new];
+                km.deliveryDelegate = ds;
                 restaurantKitchen.kitchenDelegate = km;
             }else{
                 Manager *m = [Manager new];
+                 m.deliveryDelegate = ds;
                 restaurantKitchen.kitchenDelegate = m;
             }
             

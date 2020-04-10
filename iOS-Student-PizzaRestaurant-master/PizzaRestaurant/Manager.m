@@ -7,6 +7,7 @@
 //
 
 #import "Manager.h"
+#import "DeliveryService.h"
 
 @implementation Manager
 - (BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings{
@@ -22,7 +23,8 @@
 - (BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen{
     return false;
 }
+
 - (void)kitchenDidMakePizza:(Pizza *)pizza{
-    
+   [_deliveryDelegate deliverPizza:pizza];
 }
 @end
