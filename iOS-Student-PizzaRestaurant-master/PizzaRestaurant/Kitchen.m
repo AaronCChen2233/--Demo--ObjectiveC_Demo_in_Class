@@ -13,7 +13,18 @@
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings
 {
-    return [[Pizza alloc]init:size:toppings];
+    if([_kitchenDelegate kitchenShouldUpgradeOrder:self]){
+        size = [Pizza NsStringToPizzaSizeE:@"large"];
+    }
+    
+    if(![_kitchenDelegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]){
+        return nil;
+    }
+    
+    Pizza *pizza =[[Pizza alloc]init:size:toppings];
+    [_kitchenDelegate kitchenDidMakePizza:pizza];
+    
+    return pizza;
 }
 
 - (Pizza *)largePepperoni:(PizzaSize)size

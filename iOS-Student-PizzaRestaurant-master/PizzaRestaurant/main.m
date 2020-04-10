@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "Kitchen.h"
+#import "Manager.h"
+#import "KindManager.h"
 
 int main(int argc, const char * argv[])
 {
-
+    
     @autoreleasepool {
         
         NSLog(@"Please pick your pizza size and toppings:");
@@ -40,10 +42,17 @@ int main(int argc, const char * argv[])
             
             [commandWords removeObjectAtIndex:0];
             
+            /**Only a quarter of the chance you will meet a kind manager*/
+            if(arc4random_uniform(4)==0){
+                KindManager *km = [KindManager new];
+                restaurantKitchen.kitchenDelegate = km;
+            }else{
+                Manager *m = [Manager new];
+                restaurantKitchen.kitchenDelegate = m;
+            }
+            
             Pizza *p = [restaurantKitchen makePizzaWithSize:ps toppings:commandWords];
-
         }
-
     }
     return 0;
 }
